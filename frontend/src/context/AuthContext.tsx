@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
-import { User, Role } from '../types';
-import { jwtDecode } from 'jwt-decode';
+import { User } from '../types';
 
 interface AuthContextType {
     user: User | null;

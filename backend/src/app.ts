@@ -14,6 +14,8 @@ app.use(morgan('dev'));
 
 app.use('/api/auth', authRoutes);
 app.use('/api/loans', loanRoutes);
+import officerRoutes from './routes/officerRoutes';
+app.use('/api/officer', officerRoutes);
 import analyticsRoutes from './routes/analyticsRoutes';
 app.use('/api/analytics', analyticsRoutes);
 

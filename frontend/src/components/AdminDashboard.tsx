@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { AnalyticsData, Loan } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { Button } from '@/components/ui/button';
 
-export default function AdminDashboard({ role }: { role: string }) {
+export default function AdminDashboard({ role: _role }: { role: string }) {
     const [stats, setStats] = useState<AnalyticsData | null>(null);
     const [loans, setLoans] = useState<Loan[]>([]);
     const token = localStorage.getItem('token');

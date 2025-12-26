@@ -1,0 +1,6 @@
+src/components/AdminDashboard.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/AdminDashboard.tsx(8,40): error TS6133: 'role' is declared but its value is never read.
+src/context/AuthContext.tsx(2,1): error TS6133: 'axios' is declared but its value is never read.
+src/context/AuthContext.tsx(3,16): error TS6133: 'Role' is declared but its value is never read.
+src/context/AuthContext.tsx(4,1): error TS6133: 'jwtDecode' is declared but its value is never read.
+src/pages/Dashboard.tsx(1,1): error TS6133: 'React' is declared but its value is never read.

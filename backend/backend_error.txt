@@ -1,0 +1,4 @@
+src/routes/loanRoutes.ts(2,10): error TS2305: Module '"../controllers/loanController"' has no exported member 'apply'.
+src/routes/loanRoutes.ts(2,17): error TS2305: Module '"../controllers/loanController"' has no exported member 'getAllLoans'.
+src/routes/loanRoutes.ts(2,30): error TS2305: Module '"../controllers/loanController"' has no exported member 'getMyLoans'.
+src/routes/loanRoutes.ts(2,42): error TS2305: Module '"../controllers/loanController"' has no exported member 'updateStatus'.

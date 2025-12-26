@@ -9,6 +9,9 @@ function PrivateRoute({ children }: { children: React.ReactNode }) {
     return user ? <>{children}</> : <Navigate to="/login" />;
 }
 
+import LoanList from './pages/LoanList';
+import LoanDetail from './pages/LoanDetail';
+
 export default function App() {
     return (
         <Router>
@@ -18,6 +21,16 @@ export default function App() {
                     <Route path="/" element={
                         <PrivateRoute>
                             <Dashboard />
+                        </PrivateRoute>
+                    } />
+                    <Route path="/officer/loans" element={
+                        <PrivateRoute>
+                            <LoanList />
+                        </PrivateRoute>
+                    } />
+                    <Route path="/officer/loan/:id" element={
+                        <PrivateRoute>
+                            <LoanDetail />
                         </PrivateRoute>
                     } />
                 </Routes>

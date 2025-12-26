@@ -53,6 +53,7 @@ model Loan {
   endDate        DateTime?
 
   repayments     Repayment[]
+  auditLogs      AuditLog[]
   createdAt      DateTime   @default(now())
   updatedAt      DateTime   @updatedAt
 }
@@ -68,10 +69,14 @@ model Repayment {
 
 model AuditLog {
   id        String   @id @default(uuid())
-  userId    String
+  userId    String   // The actor (Loan Officer)
   user      User     @relation(fields: [userId], references: [id])
-  action    String
-  details   String
+  action    String   // e.g., "LOAN_STATUS_CHANGE"
+  loanId    String?
+  loan      Loan?    @relation(fields: [loanId], references: [id])
+  oldStatus String?
+  newStatus String?
+  details   String?
   timestamp DateTime @default(now())
 }
 
